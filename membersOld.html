@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Metadata de la page -->
+    <title>YM Liège - Anciens membres</title>
+
+</head>
+
+    <body>
+
+        <!-- Navigation bar : imported with Javascript-->
+        <header id="header-element"></header>
+
+        <main>
+
+            <!-- Titre + photo d'ensemble -->
+            <section class="global"> 
+
+                <h1 class="global-title"> Nos anciennes équipes </h1>
+
+                <div > 
+                    <h2 class="global-caption"> 2018  &nbsp; <i class="fa-solid fa-brain"></i> &nbsp; Naissance de la section Young Minds Liège  </h2>
+                    <img 
+                        class="global-img-multiple"
+                        src=".\Images\Members\Teams\Team_2018.jpg" 
+                        alt="Photo d'ensemble de l'équipe à la création de Young Minds Liège en 2018">
+                </div>
+                <div>
+                    <h2 class="global-caption"> 2019 &nbsp; <i class="fa-solid fa-brain"></i> &nbsp; Notre premier Printemps des Sciences</h2>
+                    <img 
+                        class="global-img-multiple"
+                        src=".\Images\Members\Teams\Team_2019.jpg" 
+                        alt="Photo d'ensemble de l'équipe au Printemps des Sciences 2019">
+                </div>
+            </section>
+
+
+            <!-- Anciens membres -->
+            <section class="oldmembers">
+
+                <h2 class="oldmembers-title"> Nos anciens membres </h2>
+
+                <!-- Cartes des membres actifs : imported by javascript-->
+                <div id="oldmembers-cards"></div>
+
+            </section> 
+            
+
+            <!-- Modal window : généré automatiquement par javascript quand bouton "Pour plus d'infos" clické-->
+            <section class="modal" id="modal"></section>
+
+        </main>
+
+        <!-- Footer : imported with Javascript-->
+        <footer id="footer-element"></footer>
+       
+        
+         <!-- Javascript files -->
+         <script src="common.js" type="module"></script>
+         <script src="membersOld.js" type="module"></script>
+
+    </body>
+
+</html>

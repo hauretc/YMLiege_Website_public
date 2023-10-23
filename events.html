@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Metadata de la page -->
+    <title>YM Liège - Evènements</title>
+
+</head>
+
+    <body>
+
+        <!-- Navigation bar : imported with Javascript-->
+        <header id="header-element"></header>
+
+        <main>
+
+            <!-- Evènements à venir -->
+            <section class="future"> 
+
+                <h1 class="future-title"> Nos évènements à venir </h1>
+
+                <!-- Liste des évènements à venir : imported by javascript -->
+                <div id="future-events"></div>
+            
+            </section>
+
+             <!-- Evènements passés -->
+            <section class="past">
+
+                <h1 class="past-title"> Nos évènements passés </h1>
+
+                <!-- Liste des évènements passés : imported by javascript -->
+                <div id="past-events"></div>
+
+            </section>
+
+            <!-- Modal window : généré automatiquement par javascript quand bouton "Voir les photos de cet évènement" clické-->
+            <section class="modal modal-event" id="modal"></section>
+
+        </main>
+
+        <!-- Footer : imported with Javascript-->
+        <footer id="footer-element"></footer>
+       
+        
+         <!-- Javascript files -->
+         <script src="common.js" type="module"></script>
+         <script src="events.js" type="module"></script>
+
+    </body>
+
+</html>

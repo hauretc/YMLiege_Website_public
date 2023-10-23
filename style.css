@@ -1,0 +1,862 @@
+
+/*---------------------------------------------------*/
+/* Download fonts */
+/*---------------------------------------------------*/
+
+@font-face {
+    font-family: Cooper;
+    src: url('Fonts/cooper-hewitt/CooperHewitt-Heavy.otf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: Cooper;
+    src: url('Fonts/cooper-hewitt/CooperHewitt-Semibold.otf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: Cooper;
+    src: url('Fonts/cooper-hewitt/CooperHewitt-Book.otf');
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: SourceSans;
+    src: url('Fonts/source-sans-pro/SourceSansPro-Black.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: SourceSans;
+    src: url('Fonts/source-sans-pro/SourceSansPro-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: SourceSans;
+    src: url('Fonts/source-sans-pro/SourceSansPro-Light.ttf');
+    font-weight: 200;
+}
+
+/*---------------------------------------------------*/
+/* Color palette */
+/*---------------------------------------------------*/
+
+:root{
+    --white : #fffdfa;
+    --black : #121212;
+    --primary-lightlight : #e4e8e5;
+    --primary-light : #bdc7be;
+    --primary-dark : #4c524e;
+    /*--primary-dark : #7f8983;*/
+    --secondary-light : #209281;
+    --secondary-dark : #1b6a57;
+    --accent-light :#efbd30;
+    --accent-light-lightbg: #d19e10;
+    --accent-dark : #db4111; /*#ef5d30;*/
+}
+
+/*---------------------------------------------------*/
+/* General styling */
+/*---------------------------------------------------*/
+
+body{
+
+    background : var(--white);
+    color : var(--secondary-dark);
+
+    font-family: SourceSans, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    
+    margin: 0;
+    padding-top: 170px;
+
+    text-align: center;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: Cooper, sans-serif;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+button{
+    background : var(--secondary-dark);
+    color : var(--primary-light);
+
+    padding : 8px 12px;
+    border : none;
+    border-radius : 5px;
+}
+
+button:hover{
+    background : var(--accent-light);
+    color : var(--secondary-dark);
+}
+
+button:active{
+    background : var(--accent-dark)
+}
+
+a{
+    color: var(--secondary-light);
+    text-decoration-line: none;
+}
+
+a:hover{
+    color: var(--accent-light);
+}
+
+a:active{
+    color: var(--accent-dark);
+}
+
+.text-central{
+    width: 80%;
+    margin: auto;
+}
+
+.lineofimg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 5vh 50px;
+}
+
+.imginline{
+    width : 30%;
+    border-radius : 20%;
+}
+
+
+/*---------------------------------------------------*/
+/* Utility classes */
+/*---------------------------------------------------*/
+
+.bold{
+    font-weight: 800;
+}
+
+.secdark{
+    color : var(--secondary-dark);
+}
+
+.leftalign{
+    text-align: left;
+}
+
+.rightalign{
+    text-align:right;
+}
+
+
+/*---------------------------------------------------*/
+/* Header */
+/*---------------------------------------------------*/
+
+header a{
+    color: var(--primary-light);
+}
+
+.navbar{
+    color : var(--primary-light);
+    font-weight : 400;
+    font-size : 24px;
+
+    background-color: var(--secondary-dark);
+    padding: 20px 35px 5px 20px;
+    
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    position: fixed;
+    top:0;
+    left:0; 
+    right:0;
+    height: 140px;
+}
+
+.navbar-logoitems{
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    gap: 30px;
+}
+
+.navbar-logo{
+   width : 150px;
+   border: 2px solid var(--secondary-dark);
+   border-radius : 10px;
+}
+
+.navbar-logo:hover{
+    border: 2px solid var(--accent-light);
+    border-radius : 10px;
+}
+
+.navbar-logo:active{
+    border: 2px solid var(--accent-dark);
+    border-radius : 10px;
+}
+
+.navbar-items, .navbar-contact{
+    padding-bottom : 10px;
+}
+
+.currentpage{
+    font-weight: 800;
+}
+
+.navbar-item:hover{
+    color: var(--accent-light);
+}
+
+.navbar-item:active{
+    color: var(--accent-dark);
+}
+
+.navbar-items{
+    display: flex;
+    gap: 25px;
+}
+
+.navbar-contact{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-contact-item{
+    font-size:35px;
+}
+
+.navbar-contact-item:hover{
+    color: var(--accent-light);
+}
+
+.navbar-contact-item:active{
+    color: var(--accent-dark);
+}
+
+
+/*---------------------------------------------------*/
+/* Footer */
+/*---------------------------------------------------*/
+
+.footer{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    background-color: var(--secondary-dark);
+    color : var(--primary-light);
+
+    font-family: SourceSans;
+    font-size: 20px;
+
+    padding : 30px;
+}
+
+.footer-linkscopyright{
+    text-align: left;
+}
+
+.footer-links-text{
+    margin-bottom: 5px;
+}
+
+.footer-links-listitem{
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.footer-links-listitem-space{
+    margin-top: 5px;
+}
+
+.footer-copyright{
+    margin-top: 25px;
+    font-size : 18px;
+}
+
+.footer-contact{
+    text-align: right;
+}
+
+.footer-contact-text{
+    font-size: 24px;
+    margin-bottom : 10px;
+}
+
+.footer-contact-items{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 30px;
+}
+
+.footer-contact-item:hover{
+    color: var(--accent-light);
+}
+
+.footer-contact-item:active{
+    color: var(--accent-dark);
+}
+
+footer a{
+    color: var(--primary-light);
+}
+
+
+/*---------------------------------------------------*/
+/* Modals windows */
+/*---------------------------------------------------*/
+
+.navbar-modal{
+
+    position: fixed;
+    top: 155px;
+
+    display: none;
+    flex-direction: column;
+    
+    background : var(--secondary-dark);
+    color: var(--primary-light);
+
+    font-size: 20px;
+    line-height: 28px;
+    text-align: left;
+
+    padding : 10px 15px;
+}
+
+.modal-displayed{
+    display: flex;
+}
+
+#modal-project{
+    left: 290px;
+}
+
+#modal-members{
+    left: 400px;
+}
+
+#modal-activities{
+    left: 539px;
+}
+
+.modal-email{
+    display: none;
+
+    background : var(--secondary-dark);
+    color: var(--primary-light);
+}
+
+#navbar-modal-email{
+    position: fixed;
+    top: 180px;
+    right: 10px;
+}
+
+#footer-modal-email{
+    position: fixed;
+    bottom: 310px;
+    right: 10px;
+}
+
+.modal-email-displayed{
+    display: block;
+}
+
+.modal-email-text{
+
+    padding: 0px 15px;
+    font-size: 18px;
+}
+
+.modal-email-adress{
+    font-weight: 600;
+}
+
+.modal-email-closebtn{
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    margin: 0;
+
+    font-size : 16px;
+
+    background: none;
+    border: none;
+    color: var(--primary-light);
+}
+
+.modal-email-closebtn:hover{
+    background: none;
+    color : var(--primary-dark);
+}
+
+
+/*---------------------------------------------------*/
+/* Home page */
+/*---------------------------------------------------*/
+
+.home-sec{
+    margin: 100px 0px;
+}
+
+.home-sec a{
+    font-weight: 800;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    height : 98vh;
+    background-color: var(--primary-light);
+    margin-top: -140px;
+    padding: 230px 50px 100px 50px;
+}
+
+.welcome-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap : 5%;
+}
+
+.welcome-title{
+    font-size: 70px;
+}
+
+.welcome-img{
+    width: 25%;
+    margin-bottom: 0;
+}
+
+.arrow{
+    font-size: 90px;
+}
+
+.subsecwithim{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap : 5%;
+
+    margin-top: 20px;
+}
+
+.subsecwithim-text{
+    font-size: 30px;
+    width : 35%;
+}
+
+.subsecnoim-text{
+    font-size: 35px;
+    width : 50%;
+    margin: auto;
+}
+
+.subsecwithim-img{
+    width: 35%;
+    border: 10px solid var(--secondary-dark);
+    border-radius: 50%;
+}
+
+#who-img{
+    width:50%;
+    border: 10px solid var(--secondary-dark);
+    border-radius: 20%;
+}
+
+.contact{
+    background-color: var(--primary-light);
+    padding: 50px 50px 100px 50px;
+    margin-bottom: 0;
+}
+
+.contact-subsec-text{
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.contact-final{
+    font-size: 32px;
+    margin-top: 50px;
+}
+
+.contact-email-adress{
+    font-weight: 600;
+}
+
+/*---------------------------------------------------*/
+/* Project */
+/*---------------------------------------------------*/
+
+.project{
+    font-size: 18px;
+}
+
+.project a{
+    font-weight: 800;
+}
+
+.project-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 5vh 50px;
+}
+
+.sec-text{
+    width: 50%;
+}
+
+.sec-img{
+    height: 15vh;
+}
+
+
+
+/*---------------------------------------------------*/
+/* Members */
+/*---------------------------------------------------*/
+
+.global-caption{
+    color : var(--secondary-light);
+}
+
+.global-img-single{
+    width: 80%;
+}
+
+.global-img-multiple{
+    width: 70%;
+}
+
+.cards-ligne{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.academique{
+    margin-bottom: 20px;
+}
+
+/* Card */
+
+.card{
+    display : flex;
+    align-items : center;
+    
+    background: var(--primary-light);
+    border: 3px solid var(--secondary-dark);
+
+    color : var(--primary-dark);
+
+    padding : 20px 30px;
+}
+
+.card-bureau{
+    width: 35%
+}
+
+.card-activemember{
+    width: 25%
+}
+
+.card-academique{
+    width: 40%;
+    margin: auto;
+}
+
+.card-bureau .card-img{
+    width : 150px;
+}
+
+.card-activemember .card-img{
+    width: 100px;
+}
+
+.card-academique .card-img{
+    width: 170px;
+}
+
+.card-info{
+    text-align: start;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.card-info-name{
+    font-weight: 800;
+    color : var(--secondary-dark);    
+}
+
+.card-bureau .card-info-name{
+    font-size: 22px
+}
+
+.card-activemember .card-info-name{
+    font-size: 20px
+}
+
+.card-academique .card-info-name{
+    font-size: 22px
+}
+
+.card-info-title{
+    font-style: italic;
+    font-size: 18px;
+    color : var(--secondary-light);
+}
+
+.card-bureau .card-info-domain{
+    margin-top: 20px;
+}
+
+.card-activemember .card-info-domain{
+    margin-top: 10px;
+}
+
+.card-academique .card-info-domain{
+    margin-top: 25px;
+}
+
+.card-info-btncontainer{
+    display: flex;
+    justify-content: start;
+}
+
+.card-info-btn{
+    margin: 15px 0px;
+}
+
+/* Modal */
+
+.modal{
+    display: none;
+
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+
+    background : var(--primary-light);
+    border: 8px solid var(--secondary-dark);
+    box-shadow: 8px 8px 5px var(--primary-dark);
+
+    color : var(--primary-dark);
+}
+
+.modal-member{
+    width: 60%;
+    overflow: auto;
+    max-height: 60%;
+}
+
+.modal-header{
+    position: relative;
+}
+
+.modal-closebtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size : 24px;
+
+    background: none;
+    border: none;
+    color: var(--secondary-dark);
+}
+
+.modal-closebtn:hover{
+    color: var(--secondary-light);
+    background : none;
+}
+
+.modal-top{
+    display: flex;
+    align-items : center;
+    justify-content: start;
+
+    padding : 30px 50px 20px 50px;
+}
+
+.modal-img {
+    width: 200px;
+}
+
+.modal-info{
+    text-align: start;
+    margin-left: 50px;
+    font-size : 18px;
+}
+
+.modal-info-name{
+    font-weight: 800;
+    font-size: 26px;
+    color : var(--secondary-dark);
+}
+
+.modal-info-title{
+    font-style: italic;
+    font-size: 22px;
+    color : var(--secondary-light);
+}
+
+.modal-info-domain{
+    margin-top : 20px;
+}
+
+.modal-addinfo{
+    text-align: start;
+    padding : 0px 50px 20px 50px;
+}
+
+.modal-addinfo-texttitle{
+
+    font-weight: 800;
+    color: var(--secondary-dark);
+
+    margin-top: 3px;
+    margin-bottom : 13px;
+
+}
+
+.modal-addinfo-text{
+    margin-bottom : 10px;
+}
+
+
+/*---------------------------------------------------*/
+/* Events */
+/*---------------------------------------------------*/
+
+.future{
+    margin-bottom : 80px;
+}
+
+.event{
+    margin-bottom : 20px;
+}
+
+.event-container{
+    display : flex;
+    align-items : center;
+
+    width : 90%;
+    margin : auto;
+
+    background: var(--primary-light);
+    border: 4px solid var(--secondary-dark);
+}
+
+.event-date{
+    font-family: Cooper;
+    font-size: 20px;
+    font-weight: 600;
+
+    color : var(--secondary-dark);
+
+    width : 15%;
+
+    margin : 20px;
+}
+
+.event-img {
+    width : 35%;
+
+    margin : 30px;
+}
+
+.event-infos{
+    display : flex;
+    flex-direction : column;
+    justify-content : space-evenly;
+    align-items : start;
+
+    text-align : left;
+
+    margin : 20px;
+
+    width : 90%;
+
+    color : var(--primary-dark);
+}
+
+.event-infos-title{
+    font-family: Cooper;
+    font-size: 30px;
+    font-weight : 600;
+
+    color : var(--secondary-dark)
+}
+
+.event-infos-collab{
+    font-size : 18px;
+    font-style : italic;
+
+    color : var(--secondary-light);
+}
+
+.event-infos-desc{
+    margin : 20px 0px;
+}
+
+.event-infos a{
+    font-size: 18px;
+    font-weight : 800;
+    margin-bottom : 5px;
+}
+
+.event-infos a:hover{
+    color : var(--accent-light-lightbg);
+}
+
+.event-infos-imgs{
+    margin-top : 20px;
+}
+
+.event-infos-img{
+    height: 150px;
+    padding: 3px;
+}
+
+.btn-pictures{
+    font-size : 18px;
+    padding : 10px 20px ; 
+
+    margin-top : 20px;
+    margin-bottom : 20px;
+}
+
+
+/*---------------------------------------------------*/
+/* Workshops */
+/*---------------------------------------------------*/

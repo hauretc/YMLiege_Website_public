@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Metadata de la page -->
+    <title>YM Liège - Membres actuels</title>
+
+</head>
+
+    <body>
+
+        <!-- Navigation bar : imported with Javascript-->
+        <header id="header-element"></header>
+
+        <main>
+
+            <!-- Titre + photo d'ensemble -->
+            <section class="global"> 
+
+                <h1 class="global-title"> L'équipe actuelle </h1>
+
+                <img 
+                    class="global-img-single"
+                    src=".\Images\Members\Teams\Team_2022.jpg" 
+                    alt="Photo d'ensemble de l'équipe actuelle de Young Minds Liège">
+
+            </section>
+
+            <!-- Bureau -->
+            <section class="bureau">
+
+                <h2 class="bureau-title"> Le bureau </h2>
+
+                <!-- Cartes des membres du bureau : imported by javascript-->
+                <div id="bureau-cards"></div>
+
+            </section>
+
+            <!-- Autres membres actifs -->
+            <section class="activemembers">
+
+                <h2 class="activemembers-title"> Le reste de l'équipe </h2>
+
+                <!-- Cartes des membres actifs : imported by javascript-->
+                <div id="activemembers-cards"></div>
+
+            </section> 
+            
+            <!-- Responsable académique -->
+            <section class="academique">
+
+                <h2 class="academique-title"> Le responsable académique </h2>
+
+                <!-- Cartes du responsable académique : imported by javascript-->
+                <div id="academique-cards"></div>
+
+            </section>
+
+            <!-- Modal window : généré automatiquement par javascript quand bouton "Pour plus d'infos" clické-->
+            <section class="modal modal-member" id="modal"></section>
+
+        </main>
+
+        <!-- Footer : imported with Javascript-->
+        <footer id="footer-element"></footer>
+       
+        
+         <!-- Javascript files -->
+         <script src="common.js" type="module"></script>
+         <script src="members.js" type="module"></script>
+
+    </body>
+
+</html>
